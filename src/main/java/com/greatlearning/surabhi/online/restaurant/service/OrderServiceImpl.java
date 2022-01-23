@@ -2,7 +2,6 @@ package com.greatlearning.surabhi.online.restaurant.service;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.greatlearning.surabhi.online.restaurant.entity.Bills;
 import com.greatlearning.surabhi.online.restaurant.entity.OrderDetails;
 import com.greatlearning.surabhi.online.restaurant.entity.Orders;
+import com.greatlearning.surabhi.online.restaurant.entity.View_all_order;
 import com.greatlearning.surabhi.online.restaurant.repository.BillRepository;
 import com.greatlearning.surabhi.online.restaurant.repository.OrderDetailsRepository;
 import com.greatlearning.surabhi.online.restaurant.repository.OrderRepository;
@@ -76,5 +76,41 @@ public class OrderServiceImpl implements OrderService {
 		// TODO Auto-generated method stub
 		return "Total Bill of Month = "+month+" is "+billRepository.calculateTotalBillByMonth(month);
 	}
-
+	
+	@Override
+	public List<View_all_order> viewAllOrders() {
+		// TODO Auto-generated method stub
+		return billRepository.viewAllOrders();
+	}
+	
+	/*@Override
+	public String viewAllOrdersByDate() {
+		// TODO Auto-generated method stub
+		return "All Orders By Date are ->" +billRepository.viewAllOrdersByDate();
+	}*/
+	
+	/*@Override
+	public String viewAllOrdersByPlace() {
+		// TODO Auto-generated method stub
+		return "All Orders By Date are ->" +billRepository.viewAllOrdersByPlace();
+	}
+	
+	@Override
+	public String viewAllOrdersByPrice() {
+		// TODO Auto-generated method stub
+		return "All Orders By Date are ->" +billRepository.viewAllOrdersByPrice();
+	}
+	
+	@Override
+	public String viewMaxSaleByMonth() {
+		// TODO Auto-generated method stub
+		return "All Orders By Date are ->" +billRepository.viewMaximumOrdersByMonth();
+	}
+	
+	@Override
+	public String viewMaxSaleByYear() {
+		// TODO Auto-generated method stub
+		return "All Orders By Date are ->" +billRepository.viewMaximumOrdersByYear();
+	}
+*/
 }

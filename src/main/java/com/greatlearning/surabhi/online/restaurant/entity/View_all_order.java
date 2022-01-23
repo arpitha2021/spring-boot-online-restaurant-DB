@@ -1,26 +1,26 @@
 package com.greatlearning.surabhi.online.restaurant.entity;
 
-import java.util.List;
-import java.util.Map;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
+import org.springframework.data.annotation.Immutable;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
-@Entity		
-@Data
+@Entity
+@Immutable
 @NoArgsConstructor
 @AllArgsConstructor
-public class Orders {
+@Builder
+public class View_all_order {
+//orderId , List_Of_Items,bill_id ,date,TOTAL
 	@Id
-	//@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer orderId;
-	private String selectedItemsWithQty;
-	private String place;
-
+	Integer orderId;
+	String listOfItems;
+	Integer billId;
+	String date;
+	double total;
 }

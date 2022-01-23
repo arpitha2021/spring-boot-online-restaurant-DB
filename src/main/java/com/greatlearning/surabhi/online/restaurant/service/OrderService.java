@@ -1,7 +1,8 @@
 package com.greatlearning.surabhi.online.restaurant.service;
 
 import java.util.List;
-import java.util.Map;
+
+import com.greatlearning.surabhi.online.restaurant.entity.View_all_order;
 
 public interface OrderService {
 
@@ -14,6 +15,18 @@ public interface OrderService {
 
 	String selectAndOrderItems(int orderId, String itemsList);
 
+	List<View_all_order> viewAllOrders();
+
+	/*String viewAllOrdersByDate();
+
+*/	/*String viewAllOrdersByPlace();
+
+	String viewAllOrdersByPrice();
+
+	String viewMaxSaleByYear();
+
+	String viewMaxSaleByMonth();
+*/
 	//void calculateTotalBillByOrder(int orderId);
 
 }

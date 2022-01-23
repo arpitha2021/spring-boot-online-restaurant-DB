@@ -24,4 +24,5 @@ public class Bills {
 	private int orderId;
 	private String date;
 	private double totalBill;
+	private String place;
 }
